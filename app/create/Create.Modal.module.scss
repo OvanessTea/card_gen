@@ -1,0 +1,61 @@
+$size: 4.5;
+
+.modal {
+    height: 700px;
+    width: 1250px;
+    border: 3px solid #feecbb;
+    border-radius: 4px;
+    background-color: #fff5d83d;
+
+    .right_side {
+        .card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: calc($size * 63px);
+            height: calc($size * 88px);
+            margin: -150px;
+            float: left;
+            perspective: calc($size * 88px);
+
+            .content {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+                transition: transform 0.5s;
+                transform-style: preserve-3d;
+
+                .front_side,
+                .back_side {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    background: white;
+                    line-height: 300px;
+                    color: #03446A;
+                    text-align: center;
+                    font-size: 60px;
+                    border-radius: calc($size * 2.88888px);
+                    backface-visibility: hidden;
+                }
+
+                .back_side {
+                    background-image: url('../../assets/images/card_back.jpg');
+                    background-size: calc($size * 63px) calc($size * 88px);
+                    transform: rotateY(180deg);
+                }
+            }
+
+            &.fliped {
+                .content {
+                    transform: rotateY(180deg);
+                    transition: transform 1s;
+                }
+            }
+        }
+
+
+    }
+}

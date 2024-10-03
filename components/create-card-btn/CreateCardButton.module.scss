@@ -1,0 +1,19 @@
+.button {
+    background-color: #dddddd;
+    padding: 5px 25px;
+    border: 1px solid var(--border-color);
+    opacity: 0.5;
+    outline-offset: 0px;
+    letter-spacing: 1px;
+    &:hover {
+        opacity: 0.9;
+        color: #fff;
+        background-color: #62a9ff;
+        letter-spacing: 3px;
+        padding: 5px 25px;
+        border: 1px solid #62a9ff;
+        outline: 2px solid var(--border-color);
+        outline-offset: 5px;
+        transition: 0.2s;
+    }
+}
