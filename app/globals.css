@@ -2,26 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: cruinn-regular;
+  src: URL('./fonts/cruinn.regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: cruinn-thin;
+  src: URL('./fonts/cruinn.thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: cruinn-medium;
+  src: URL('./fonts/cruinn.medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: cruinn-light;
+  src: URL('./fonts/cruinn.light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: cruinn-bold;
+  src: URL('./fonts/cruinn.bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: cruinn-black;
+  src: URL('./fonts/cruinn.black.ttf') format('truetype');
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --border-color: #e0e0e0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --border-color: #242424;
   }
 }
-
-body {
+html {
+  height: 100%;
+  width: 100%;
+}
+body { 
+  height: 100%;
+  width: 100%;
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
+  font-family: cruinn-regular;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.footer {
+  opacity: 0.5;
 }
