@@ -1,0 +1,27 @@
+.container {
+    border: 1px solid #535353;
+    background-color: #36363625;
+    margin: 15px;
+    height: calc(100% - 30px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    .mana_cost__container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        .mana__colorless input{
+            background-color: #535353ee;
+            color: white
+        }
+    }
+    .text_box__container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
